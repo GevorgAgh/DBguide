@@ -1,0 +1,11 @@
+# The site is a single, pre-built page in public/index.html.
+# No build step is needed on Netlify; it serves the public/ folder as is.
+[build]
+  publish = "public"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
